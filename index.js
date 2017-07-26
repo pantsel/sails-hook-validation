@@ -31,10 +31,7 @@ module.exports = function(sails) {
     //to add custom errors message
     //logic
     function patch() {
-        sails
-            .util
-            ._
-            .forEach(sails.models, function(model) {
+        Object.keys(sails.models).forEach(function(model) {
                 //bind path validate
                 //on concrete models
                 //and left derived model
